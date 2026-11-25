@@ -16,6 +16,7 @@ import { Route as GovernmentRouteImport } from './routes/government'
 import { Route as LabourCodesRouteImport } from './routes/labour-codes'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ShadowHrRouteImport } from './routes/shadow-hr'
+import { Route as SubmitResumeRouteImport } from './routes/submit-resume'
 import { Route as UpdatesRouteImport } from './routes/updates'
 import { Route as VisionRouteImport } from './routes/vision'
 import { Route as WhyWorkWithUsRouteImport } from './routes/why-work-with-us'
@@ -55,6 +56,11 @@ const ShadowHrRoute = ShadowHrRouteImport.update({
   path: '/shadow-hr',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SubmitResumeRoute = SubmitResumeRouteImport.update({
+  id: '/submit-resume',
+  path: '/submit-resume',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const UpdatesRoute = UpdatesRouteImport.update({
   id: '/updates',
   path: '/updates',
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/labour-codes': typeof LabourCodesRoute
   '/services': typeof ServicesRoute
   '/shadow-hr': typeof ShadowHrRoute
+  '/submit-resume': typeof SubmitResumeRoute
   '/updates': typeof UpdatesRoute
   '/vision': typeof VisionRoute
   '/why-work-with-us': typeof WhyWorkWithUsRoute
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/labour-codes': typeof LabourCodesRoute
   '/services': typeof ServicesRoute
   '/shadow-hr': typeof ShadowHrRoute
+  '/submit-resume': typeof SubmitResumeRoute
   '/updates': typeof UpdatesRoute
   '/vision': typeof VisionRoute
   '/why-work-with-us': typeof WhyWorkWithUsRoute
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/labour-codes': typeof LabourCodesRoute
   '/services': typeof ServicesRoute
   '/shadow-hr': typeof ShadowHrRoute
+  '/submit-resume': typeof SubmitResumeRoute
   '/updates': typeof UpdatesRoute
   '/vision': typeof VisionRoute
   '/why-work-with-us': typeof WhyWorkWithUsRoute
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/labour-codes'
     | '/services'
     | '/shadow-hr'
+    | '/submit-resume'
     | '/updates'
     | '/vision'
     | '/why-work-with-us'
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/labour-codes'
     | '/services'
     | '/shadow-hr'
+    | '/submit-resume'
     | '/updates'
     | '/vision'
     | '/why-work-with-us'
@@ -142,6 +153,7 @@ export interface FileRouteTypes {
     | '/labour-codes'
     | '/services'
     | '/shadow-hr'
+    | '/submit-resume'
     | '/updates'
     | '/vision'
     | '/why-work-with-us'
@@ -155,6 +167,7 @@ export interface RootRouteChildren {
   LabourCodesRoute: typeof LabourCodesRoute
   ServicesRoute: typeof ServicesRoute
   ShadowHrRoute: typeof ShadowHrRoute
+  SubmitResumeRoute: typeof SubmitResumeRoute
   UpdatesRoute: typeof UpdatesRoute
   VisionRoute: typeof VisionRoute
   WhyWorkWithUsRoute: typeof WhyWorkWithUsRoute
@@ -211,6 +224,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ShadowHrRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/submit-resume': {
+      id: '/submit-resume'
+      path: '/submit-resume'
+      fullPath: '/submit-resume'
+      preLoaderRoute: typeof SubmitResumeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/updates': {
       id: '/updates'
       path: '/updates'
@@ -243,6 +263,7 @@ const rootRouteChildren: RootRouteChildren = {
   LabourCodesRoute: LabourCodesRoute,
   ServicesRoute: ServicesRoute,
   ShadowHrRoute: ShadowHrRoute,
+  SubmitResumeRoute: SubmitResumeRoute,
   UpdatesRoute: UpdatesRoute,
   VisionRoute: VisionRoute,
   WhyWorkWithUsRoute: WhyWorkWithUsRoute,

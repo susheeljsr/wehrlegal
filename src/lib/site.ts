@@ -27,6 +27,7 @@ export const nav = [
   { to: "/why-work-with-us", label: "Why us" },
   ...headerNav,
   { to: "/contact", label: "Contact" },
+  { to: "/submit-resume", label: "Submit resume" },
 ] as const;
 
 export const credentials = [

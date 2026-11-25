@@ -87,6 +87,14 @@ function Shadow() {
           Ask for a Shadow HR scope
         </a>
       </Section>
+      <Section tone="mist" title="Part-time Shadow HR — submit your resume">
+        <p className="max-w-2xl text-sm leading-relaxed text-slate">
+          Practising and retired HR, IR and legal professionals can join the bench for part-time Shadow HR. Send your resume. Assignments are allotted only in your subject.
+        </p>
+        <Link to="/submit-resume" className="mt-6 inline-flex rounded-sm bg-navy px-5 py-3 text-sm font-semibold text-paper">
+          Submit your resume
+        </Link>
+      </Section>
     </Shell>
   );
 }

@@ -106,6 +106,9 @@ function Home() {
             <p className="mt-4 text-slate">
               Shadow HR consultants include professionals still in practice and those who retired from large employers and now take assignments. Each task is allotted only to a subject expert.
             </p>
+            <Link to="/submit-resume" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-navy">
+              Part-time Shadow HR — submit your resume <ArrowRight size={16} />
+            </Link>
           </div>
           <ul className="space-y-4">
             {pool.map((item) => (
